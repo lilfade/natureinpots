@@ -1,0 +1,7 @@
+<h2>Presales</h2>
+<a href="{{ url_for('presale.create') }}">Create Presale</a>
+<ul>
+{% for p in presales %}
+    <li>{{ p.user_email }} reserved {{ p.plant_id }} - Status: {{ p.status }}</li>
+{% endfor %}
+</ul>

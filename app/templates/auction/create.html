@@ -1,0 +1,12 @@
+<h2>Create an Auction</h2>
+<form method="post">
+    <label>Plant:</label>
+    <select name="plant_id">
+        {% for plant in plants %}
+        <option value="{{ plant.id }}">{{ plant.name }}</option>
+        {% endfor %}
+    </select><br>
+    <label>Starting Price:</label>
+    <input type="text" name="starting_price"><br>
+    <button type="submit">Create Auction</button>
+</form>

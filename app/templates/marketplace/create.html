@@ -1,0 +1,17 @@
+<h2>Create a Listing</h2>
+<form method="post">
+    <label>Plant:</label>
+    <select name="plant_id">
+        {% for plant in plants %}
+        <option value="{{ plant.id }}">{{ plant.name }}</option>
+        {% endfor %}
+    </select><br>
+    <label>Type:</label>
+    <select name="listing_type">
+        <option value="direct_sale">Direct Sale</option>
+        <option value="auction">Auction</option>
+        <option value="presale">Presale</option>
+    </select><br>
+    <input type="text" name="price" placeholder="Price"><br>
+    <button type="submit">Create Listing</button>
+</form>

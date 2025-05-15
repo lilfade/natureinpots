@@ -1,0 +1,7 @@
+<h2>Active Auctions</h2>
+<a href="{{ url_for('auction.create') }}">Create Auction</a>
+<ul>
+{% for a in auctions %}
+    <li>{{ a.plant_id }} - Start: ${{ a.starting_price }} - Status: {{ a.status }}</li>
+{% endfor %}
+</ul>

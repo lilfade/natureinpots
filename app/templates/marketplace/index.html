@@ -1,0 +1,7 @@
+<h2>Marketplace Listings</h2>
+<a href="{{ url_for('marketplace.create') }}">Create New Listing</a>
+<ul>
+{% for listing in listings %}
+    <li>Plant ID: {{ listing.plant_id }}, Price: ${{ listing.price }}, Type: {{ listing.listing_type }}</li>
+{% endfor %}
+</ul>

@@ -1,0 +1,18 @@
+<h2>Create a Presale</h2>
+<form method="post">
+    <label>Plant:</label>
+    <select name="plant_id">
+        {% for plant in plants %}
+        <option value="{{ plant.id }}">{{ plant.name }}</option>
+        {% endfor %}
+    </select><br>
+    <label>User Email:</label>
+    <input type="text" name="user_email"><br>
+    <label>Status:</label>
+    <select name="status">
+        <option value="available">Available</option>
+        <option value="reserved">Reserved</option>
+        <option value="sold">Sold</option>
+    </select><br>
+    <button type="submit">Create Presale</button>
+</form>
